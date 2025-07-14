@@ -31,6 +31,10 @@ const fs = require("fs");
 
 // stats 
 
-console.log(fs.statSync("./contact.txt"))
+// console.log(fs.statSync("./contact.txt"))
+
+//creating folder
+
+fs.mkdirSync("./Modolues");
 
 
