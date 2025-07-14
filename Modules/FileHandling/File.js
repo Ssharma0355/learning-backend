@@ -31,6 +31,14 @@ const fs = require("fs");
 
 // stats 
 
-console.log(fs.statSync("./contact.txt"))
+// console.log(fs.statSync("./contact.txt"))
+
+//creating folder
+
+// fs.mkdirSync("./Modolues");
+
+fs.writeFileSync("./sample1.txt", "It is Blocking operation");
+
+fs.writeFile("./sample2.txt", "It is a non-blobking operaation", (err) => {});
 
 
