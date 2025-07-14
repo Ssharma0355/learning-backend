@@ -1,4 +1,5 @@
 const fs = require("fs");
+const { readFile } = require("fs/promises");
 
 //sync call
 // fs.writeFileSync("./test.txt", "Hey Sachin");
@@ -41,4 +42,19 @@ fs.writeFileSync("./sample1.txt", "It is Blocking operation");
 
 fs.writeFile("./sample2.txt", "It is a non-blobking operaation", (err) => {});
 
+// another example of blocking and non blocking 
 
+console.log("1");
+const result  = fs.readFileSync("./contact.txt","utf-8");
+console.log(result);
+console.log("2")
+
+// op-> 1 then file details then 2
+
+console.log("1");
+fs.readFile("./contact.txt","utf-8",(err,result)=>{
+    console.log(result);
+})
+console.log("2");
+
+// o/p -> 1 then 2 then file op 
