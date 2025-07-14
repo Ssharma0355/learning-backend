@@ -12,10 +12,16 @@ const fs = require("fs");
 // const contactResult = fs.readFileSync("./contact.txt","utf-8");
 // console.log(contactResult);
 
-const results = fs.readFile("./contact.txt","utf-8",(err,result)=>{
-    if(err){}
-    else if(result){
-        console.log(result)
-    }
-})
+// fs.readFile("./contact.txt","utf-8",(err,result)=>{ //async gives always it except callback
+//     if(err){}
+//     else if(result){
+//         console.log(result)
+//     }
+// })
+
+//apend with sync
+
+// fs.appendFileSync("./contact.txt", `${Date.now()}Hi Sachin \n`);
+
+fs.cpSync("./contact.txt","./copyFile.txt");
 
