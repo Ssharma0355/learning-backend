@@ -35,6 +35,10 @@ const fs = require("fs");
 
 //creating folder
 
-fs.mkdirSync("./Modolues");
+// fs.mkdirSync("./Modolues");
+
+fs.writeFileSync("./sample1.txt", "It is Blocking operation");
+
+fs.writeFile("./sample2.txt", "It is a non-blobking operaation", (err) => {});
 
 
